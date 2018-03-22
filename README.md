@@ -1,5 +1,7 @@
 # Components
 
+[Demo](https://bamlab.github.io/react-native-components-collection/)
+
 * [TextInput](./packages/react-native-component-text-input)
 * [Separator](./packages/react-native-component-separator)
 
@@ -21,4 +23,5 @@ Init a new package in the [packages](./packages) folder.
 ```bash
 lerna -v || lerna yarn global add lerna
 lerna publish
+yarn deploy-storybook
 ```
