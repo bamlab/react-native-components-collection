@@ -59,9 +59,28 @@ export default class TextInput extends Component {
 
     return (
       <View style={[styles.textInputContainer, containerStyle]}>
-        <TextInput style={[styles.textInput, style]} {...rest} />
+        <TextInput ref={this._setRef} style={[styles.textInput, style]} {...rest} />
       </View>
     );
+  }
+
+  _setRef = c => {
+    this._root = c;
+  };
+  setNativeProps(...args) {
+    return this._root.setNativeProps(...args);
+  }
+  isFocused(...args) {
+    return this._root.isFocused(...args);
+  }
+  clear(...args) {
+    return this._root.clear(...args);
+  }
+  focus(...args) {
+    return this._root.focus(...args);
+  }
+  blur(...args) {
+    return this._root.blur(...args);
   }
 }
 
