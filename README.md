@@ -13,7 +13,7 @@ yarn
 Add storybook stories in [stories](./stories).
 
 ## Add a new component
-Init a new package in the [packages][./packages] folder.
+Init a new package in the [packages](./packages) folder.
 
 # Publish
 TODO
