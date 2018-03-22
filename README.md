@@ -17,4 +17,8 @@ Add storybook stories in [stories](./stories).
 Init a new package in the [packages](./packages) folder.
 
 # Publish
-TODO
+
+```bash
+lerna -v || lerna yarn global add lerna
+lerna publish
+```
