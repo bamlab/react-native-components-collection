@@ -1,5 +1,8 @@
 {
   "lerna": "2.9.0",
+  "ignore": [
+    "*.md"
+  ],
   "packages": [
     "packages/*"
   ],
