@@ -1,10 +1,10 @@
 {
   "name": "@bam.tech/react-native-component-text-input",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "private": false,
   "publishConfig": {
-     "access": "public"
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -15,6 +15,5 @@
     "email": "lagrange.louis@gmail.com",
     "url": "https://github.com/Minishlink"
   },
-  "license": "MIT",
-  "dependencies": {}
+  "license": "MIT"
 }
