@@ -1,5 +1,20 @@
 {
+	"license": "UNLICENSED",
+	"private": true,
 	"devDependencies": {
-		"lerna": "^2.9.0"
+		"@storybook/react": "^3.3.15",
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.4",
+		"babel-plugin-react-native-web": "^0.5.3",
+		"babel-preset-react-native": "^4.0.0",
+		"lerna": "^2.9.0",
+		"react": "^16.2.0",
+		"react-dom": "^16.2.0",
+		"react-native-web": "^0.5.3"
+	},
+	"dependencies": {},
+	"scripts": {
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook"
 	}
 }
