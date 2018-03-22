@@ -1,6 +1,5 @@
 {
-	"license": "UNLICENSED",
-	"private": true,
+	"license": "MIT",
     "repository": {
         "type": "git",
         "url": "git@github.com:bamlab/react-native-components-collection.git"
