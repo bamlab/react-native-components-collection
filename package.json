@@ -17,12 +17,14 @@
 		"prettier": "^1.11.1",
 		"react": "^16.2.0",
 		"react-dom": "^16.2.0",
+		"react-native-paper": "^1.2.4",
+		"react-native-vector-icons": "^4.5.0",
 		"react-native-web": "^0.5.3"
 	},
 	"dependencies": {},
 	"scripts": {
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
-        "deploy-storybook": "yarn build-storybook && yarn gh-pages --dist storybook-static"
+		"deploy-storybook": "yarn build-storybook && yarn gh-pages --dist storybook-static"
 	}
 }
