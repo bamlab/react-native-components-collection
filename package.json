@@ -7,7 +7,10 @@
 		"babel-loader": "^7.1.4",
 		"babel-plugin-react-native-web": "^0.5.3",
 		"babel-preset-react-native": "^4.0.0",
+		"eslint": "^4.19.1",
+		"eslint-config-bambi": "^1.2.0",
 		"lerna": "^2.9.0",
+		"prettier": "^1.11.1",
 		"react": "^16.2.0",
 		"react-dom": "^16.2.0",
 		"react-native-web": "^0.5.3"

@@ -7,7 +7,7 @@ export default class TextInput extends Component {
     if (props.secureTextEntry) {
       this.state = {
         password: 'hidden',
-      }
+      };
     }
   }
 
@@ -42,7 +42,9 @@ export default class TextInput extends Component {
         <View style={[styles.textInputContainer, containerStyle]}>
           <TextInput style={[styles.textInput, style]} {...passwordProps} {...rest} />
           {!!renderSecureTextEntryVisibilityButtonContent && (
-            <Touchable style={[styles.secureTextEntryVisibilityButton, passwordVisibilityButtonStyle]} onPress={this.toggleSecureTextEntryVisibility}>
+            <Touchable
+              style={[styles.secureTextEntryVisibilityButton, passwordVisibilityButtonStyle]}
+              onPress={this.toggleSecureTextEntryVisibility}>
               {renderSecureTextEntryVisibilityButtonContent(this.state.password === 'hidden')}
             </Touchable>
           )}
@@ -50,7 +52,7 @@ export default class TextInput extends Component {
       );
     }
 
-    if (this.props.keyboardType === "email-address") {
+    if (this.props.keyboardType === 'email-address') {
       rest.autoCorrect = false;
       rest.autoCapitalize = 'none';
     }
