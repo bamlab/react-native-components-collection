@@ -1,6 +1,10 @@
 {
 	"license": "UNLICENSED",
 	"private": true,
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:bamlab/react-native-components-collection.git"
+    },
 	"devDependencies": {
 		"@storybook/react": "^3.3.15",
 		"babel-core": "^6.26.0",

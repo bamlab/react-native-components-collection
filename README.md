@@ -1,6 +1,7 @@
 # Components
 
 * [TextInput](./packages/react-native-component-text-input)
+* [Separator](./packages/react-native-component-separator)
 
 # Contributing
 ## Installation
