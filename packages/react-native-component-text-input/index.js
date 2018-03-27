@@ -40,7 +40,7 @@ export default class TextInput extends Component {
       const Touchable = PasswordVisibilityTouchable || TouchableOpacity;
       return (
         <View style={[styles.textInputContainer, containerStyle]}>
-          <TextInput style={[styles.textInput, style]} {...passwordProps} {...rest} />
+          <TextInput ref={this._setRef} style={[styles.textInput, style]} {...passwordProps} {...rest} />
           {!!renderSecureTextEntryVisibilityButtonContent && (
             <Touchable
               style={[styles.secureTextEntryVisibilityButton, passwordVisibilityButtonStyle]}
