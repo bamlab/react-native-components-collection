@@ -18,5 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "zxcvbn": "^4.4.2"
+  },
+  "peerDependencies": {
+    "@bam.tech/react-native-component-progress-bar": "*"
   }
 }

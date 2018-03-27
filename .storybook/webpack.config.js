@@ -22,6 +22,7 @@ module.exports = {
   resolve: {
     alias: {
       'react-native': 'react-native-web',
+      '@bam.tech/react-native-component-progress-bar': '../react-native-component-progress-bar',
     },
     extensions: ['.web.js', '.js'],
   },
