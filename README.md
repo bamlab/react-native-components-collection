@@ -3,6 +3,7 @@
 [Demo](https://bamlab.github.io/react-native-components-collection/)
 
 * [TextInput](./packages/react-native-component-text-input)
+* [PasswordStrengthIndicator](./packages/react-native-component-password-strength-indicator)
 * [Separator](./packages/react-native-component-separator)
 
 # Contributing
