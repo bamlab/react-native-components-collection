@@ -4,6 +4,7 @@
 
 * [TextInput](./packages/react-native-component-text-input)
 * [PasswordStrengthIndicator](./packages/react-native-component-password-strength-indicator)
+* [ProgressBar](./packages/react-native-component-progress-bar)
 * [Separator](./packages/react-native-component-separator)
 
 # Contributing
