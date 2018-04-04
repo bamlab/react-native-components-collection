@@ -3,7 +3,7 @@
   "plugins": [
     ["module-resolver", {
       "alias": {
-        "react-native-component-text": "../packages/react-native-component-text"
+        "@bam.tech/react-native-component-text": "../packages/react-native-component-text"
       }
     }]
   ]
