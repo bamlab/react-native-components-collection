@@ -1,0 +1,19 @@
+{
+  "name": "@bam.tech/react-native-component-text",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bamlab/react-native-components-collection.git"
+  },
+  "author": {
+    "name": "Louis Lagrange",
+    "email": "lagrange.louis@gmail.com",
+    "url": "https://github.com/Minishlink"
+  },
+  "license": "MIT"
+}
