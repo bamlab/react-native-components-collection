@@ -2,6 +2,7 @@
 
 [Demo](https://bamlab.github.io/react-native-components-collection/)
 
+* [Text](./packages/react-native-component-text)
 * [TextInput](./packages/react-native-component-text-input)
 * [PasswordStrengthIndicator](./packages/react-native-component-password-strength-indicator)
 * [ProgressBar](./packages/react-native-component-progress-bar)
