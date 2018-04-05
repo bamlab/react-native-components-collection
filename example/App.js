@@ -8,9 +8,9 @@ import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
-  Text,
   View
 } from 'react-native';
+import Text from '@bam.tech/react-native-component-text';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
