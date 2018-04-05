@@ -1,0 +1,10 @@
+{
+  "presets": ["react-native"],
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "@bam.tech/react-native-component-text": "../packages/react-native-component-text"
+      }
+    }]
+  ]
+}
