@@ -3,4 +3,8 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
   },
+  globals: {
+    __DEV__: true,
+    __dirname: '.'
+  },
 };

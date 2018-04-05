@@ -7,10 +7,7 @@ module.exports = {
     return [__dirname, path.resolve(__dirname, '../packages/react-native-component-text')];
   },
   getProvidesModuleNodeModules() {
-    return [
-      'react-native',
-      'react',
-    ];
+    return ['react-native', 'react'];
   },
   getBlacklistRE() {
     return blacklist([
