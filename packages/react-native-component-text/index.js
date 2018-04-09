@@ -14,19 +14,26 @@ class Text extends PureComponent {
   };
 
   render() {
-    const { autoEmphasize, ...rest } = this.props;
+    const {
+      children,
+      autoEmphasize,
+      emphasisSeparator,
+      style,
+      emphasisStyle,
+      ...rest
+    } = this.props;
 
     if (autoEmphasize) {
-      const splitted = this.props.children.split(this.props.emphasisSeparator);
+      const splitted = children.split(emphasisSeparator);
       return (
-        <RNText style={this.props.style}>
+        <RNText {...rest} style={style}>
           {splitted.map((portion, index) => {
             if (index % 2 === 0) {
               return portion;
             }
 
             return (
-              <RNText style={this.props.emphasisStyle} key={index}>
+              <RNText {...rest} style={emphasisStyle} key={index}>
                 {portion}
               </RNText>
             );
@@ -35,7 +42,7 @@ class Text extends PureComponent {
       );
     }
 
-    return <RNText {...rest} />;
+    return <RNText {...this.props} />;
   }
 }
 
