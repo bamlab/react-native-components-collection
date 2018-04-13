@@ -4,28 +4,28 @@ import {
   StyleSheet,
   TouchableOpacity,
   View,
-  Text,
+  Text as RNText,
   ActivityIndicator as RNActivityIndicator,
 } from 'react-native';
 import { GoogleSignIn } from 'react-native-google-signin';
-import DefaultGoogleLogo from './lib/images/google_logo.png';
+import DefaultLogoSource from './lib/images/google_logo.png';
 
 export default class GoogleAuthButton extends PureComponent {
   state = {
     isLoading: false,
   };
 
-  _loginWithGoogle = () => {
-    const { googleSignInConfig, onPress } = this.props;
+  loginWithGoogle = () => {
+    const { googleSignInConfig, onAuthSuccess, onAuthFailure } = this.props;
     if (!GoogleSignIn) {
       console.warn('GoogleSignIn is not installed');
       return;
     }
     this.setState({ isLoading: true });
     GoogleSignIn.configure(googleSignInConfig)
-      .then(() => GoogleSignIn.signIn())
-      .then(token => onPress(token))
-      .catch(e => console.warn(e))
+      .then(GoogleSignIn.signIn)
+      .then(onAuthSuccess)
+      .catch(onAuthFailure)
       .finally(() => {
         this.setState({ isLoading: false });
       });
@@ -37,21 +37,27 @@ export default class GoogleAuthButton extends PureComponent {
       textStyle,
       text,
       activityIndicatorColor,
-      CustomGoogleLogo,
+      LogoSource,
+      logoStyle,
       ActivityIndicatorComponent,
+      TouchableComponent,
+      TextComponent,
       ...rest
     } = this.props;
     const ActivityIndicator = ActivityIndicatorComponent || RNActivityIndicator;
-    const GoogleLogo = CustomGoogleLogo || DefaultGoogleLogo;
+    const GoogleLogo = LogoSource || DefaultLogoSource;
     const isLoading = this.props.isLoading || this.state.isLoading;
+    const Touchable = TouchableComponent || TouchableOpacity;
+    const Text = TextComponent || RNText;
     return (
-      <TouchableOpacity
-        activeOpacity={0.7}
+      <Touchable
         style={[styles.container, buttonStyle]}
         disabled={isLoading}
-        onPress={this._loginWithGoogle}
+        onPress={this.loginWithGoogle}
         {...rest}>
-        {!!GoogleLogo && <Image source={GoogleLogo} resizeMode="contain" style={styles.icon} />}
+        {!!GoogleLogo && (
+          <Image source={GoogleLogo} resizeMode="contain" style={[styles.icon, logoStyle]} />
+        )}
         <View style={styles.textContainer}>
           {isLoading ? (
             <ActivityIndicator color={activityIndicatorColor} />
@@ -59,7 +65,7 @@ export default class GoogleAuthButton extends PureComponent {
             <Text style={textStyle}>{text}</Text>
           )}
         </View>
-      </TouchableOpacity>
+      </Touchable>
     );
   }
 }
