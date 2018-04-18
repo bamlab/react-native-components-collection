@@ -7,7 +7,7 @@ import {
   Text as RNText,
   ActivityIndicator as RNActivityIndicator,
 } from 'react-native';
-import { GoogleSignIn } from 'react-native-google-signin';
+import { GoogleSignin } from 'react-native-google-signin';
 import DefaultLogoSource from './lib/images/google_logo.png';
 
 export default class GoogleAuthButton extends PureComponent {
@@ -17,13 +17,13 @@ export default class GoogleAuthButton extends PureComponent {
 
   loginWithGoogle = () => {
     const { googleSignInConfig, onAuthSuccess, onAuthFailure } = this.props;
-    if (!GoogleSignIn) {
+    if (!GoogleSignin) {
       console.warn('GoogleSignIn is not installed');
       return;
     }
     this.setState({ isLoading: true });
-    GoogleSignIn.configure(googleSignInConfig)
-      .then(GoogleSignIn.signIn)
+    GoogleSignin.configure(googleSignInConfig)
+      .then(GoogleSignin.signIn)
       .then(onAuthSuccess)
       .catch(onAuthFailure)
       .finally(() => {
