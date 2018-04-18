@@ -4,10 +4,14 @@ const blacklist = require('metro/src/blacklist');
 
 module.exports = {
   getProjectRoots() {
-    return [__dirname, path.resolve(__dirname, '../packages/react-native-component-text')];
+    return [
+      __dirname,
+      path.resolve(__dirname, '../packages/react-native-component-text'),
+      path.resolve(__dirname, '../packages/react-native-component-google-signin'),
+    ];
   },
   getProvidesModuleNodeModules() {
-    return ['react-native', 'react'];
+    return ['react-native', 'react', 'react-native-google-signin'];
   },
   getBlacklistRE() {
     return blacklist([
