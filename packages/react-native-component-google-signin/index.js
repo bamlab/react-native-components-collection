@@ -62,7 +62,7 @@ export default class GoogleAuthButton extends PureComponent {
           {isLoading ? (
             <ActivityIndicator color={activityIndicatorColor} />
           ) : (
-            <Text style={textStyle}>{text || 'GOOGLE'}</Text>
+            <Text style={[{ color: 'white' }, textStyle]}>{text || 'GOOGLE'}</Text>
           )}
         </View>
       </Touchable>
