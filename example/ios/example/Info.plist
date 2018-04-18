@@ -37,6 +37,10 @@
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string>com.components.collection</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.components.collection</string>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>

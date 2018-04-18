@@ -27,6 +27,8 @@ export default class App extends Component<PropsType> {
           googleSignInConfig={{
             iosClientId: IOS_CLIENT_ID,
           }}
+          onAuthSuccess={() => console.warn('Google SignIn succeeded!')}
+          onAuthFailure={() => console.warn('Google SignIn failed!')}
         />
       </View>
     );
