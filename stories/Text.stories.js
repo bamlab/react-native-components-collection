@@ -7,7 +7,7 @@ storiesOf('Text', module).add('default', () => <Text>Hello</Text>);
 storiesOf('Text/with emphasis', module)
   .add('default', () => <Text autoEmphasize>Hello **world**</Text>)
   .add('with custom emphasis style', () => (
-    <Text autoEmphasize emphasisStyle={{ textDecoration: 'underline' }}>
+    <Text autoEmphasize emphasisStyle={{ textDecorationLine: 'underline' }}>
       Hello **world**
     </Text>
   ))

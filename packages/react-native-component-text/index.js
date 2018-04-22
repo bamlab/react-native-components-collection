@@ -42,7 +42,11 @@ class Text extends PureComponent {
       );
     }
 
-    return <RNText {...this.props} />;
+    return (
+      <RNText style={style} {...rest}>
+        {children}
+      </RNText>
+    );
   }
 }
 
