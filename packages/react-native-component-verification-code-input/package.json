@@ -1,0 +1,19 @@
+{
+  "name": "@bam.tech/react-native-component-verification-code-input",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bamlab/react-native-components-collection.git"
+  },
+  "author": {
+    "name": "Antoine DOUBOVETZKY",
+    "email": "antoined@bam.tech",
+    "url": "https://github.com/AntoineDoubovetzky"
+  },
+  "license": "MIT"
+}
