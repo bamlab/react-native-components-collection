@@ -17,11 +17,20 @@ type Props = {
   style?: any,
   inputStyle?: any,
   textStyle?: any,
+  keyboardType: string,
+  HiddenTextInputComponent: React.Node,
+  TouchableComponent: React.Node,
   onChangeText: (code: string) => any,
   onEndEditing?: () => any,
 };
 
 class VerificationCodeInput extends PureComponent<Props> {
+  static defaultProps = {
+    keyboardType: 'numeric',
+    HiddenTextInputComponent: TextInput,
+    TouchableComponent: props => <TouchableOpacity activeOpacity={0.7} {...props} />,
+  };
+
   hiddenInput: ?TextInput = null;
 
   componentDidUpdate(prevProps) {
@@ -39,9 +48,7 @@ class VerificationCodeInput extends PureComponent<Props> {
   renderInput = (_, index: number) => {
     return (
       <View key={index} style={[styles.codeInput, this.props.inputStyle]}>
-        <Text style={[styles.codeText, this.props.textStyle]}>
-          {this.props.value.split('')[index] || ' '}
-        </Text>
+        <Text style={[styles.codeText, this.props.textStyle]}>{this.props.value[index]}</Text>
       </View>
     );
   };
@@ -50,24 +57,29 @@ class VerificationCodeInput extends PureComponent<Props> {
     if (this.hiddenInput) this.hiddenInput.focus();
   };
 
-  onChange = (code: string) => {
-    this.props.onChangeText(code);
-  };
-
   render() {
+    const {
+      style,
+      TouchableComponent,
+      HiddenTextInputComponent,
+      keyboardType,
+      length,
+      value,
+    } = this.props;
     return (
-      <View style={this.props.style}>
-        <TouchableOpacity onPress={this.focus}>
+      <View style={style}>
+        <TouchableComponent onPress={this.focus}>
           <View style={styles.codeRow}>{this.renderInputs()}</View>
-        </TouchableOpacity>
+        </TouchableComponent>
         <View style={styles.hiddenInput}>
-          <TextInput
-            keyboardType="numeric"
-            maxLength={this.props.length}
+          <HiddenTextInputComponent
+            keyboardType={keyboardType}
+            maxLength={length}
             ref={ref => {
               this.hiddenInput = ref;
             }}
-            onChangeText={this.onChange}
+            value={value}
+            onChangeText={this.props.onChangeText}
           />
         </View>
       </View>
@@ -76,20 +88,10 @@ class VerificationCodeInput extends PureComponent<Props> {
 }
 
 const styles = StyleSheet.create({
-  hiddenInput: Platform.select({
-    ios: {
-      display: 'none',
-    },
-    android: {
-      // display:none disables removing characters with back key in keyboard...
-      height: 0,
-      opacity: 0,
-    },
-    web: {
-      height: 0,
-      opacity: 0,
-    },
-  }),
+  hiddenInput: {
+    height: 0,
+    opacity: 0,
+  },
   codeInput: {
     width: 35,
     height: 53,
