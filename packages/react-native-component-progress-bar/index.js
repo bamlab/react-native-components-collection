@@ -4,7 +4,9 @@ import { StyleSheet, View, Animated, Easing } from 'react-native';
 export default class ProgressBar extends PureComponent {
   state = {
     width: 0,
-    progress: new Animated.Value((this.props.progress || 0) / 100),
+    progress: new Animated.Value(
+      this.props.initialProgress != null ? this.props.initialProgress : this.props.progress || 0
+    ),
   };
 
   static defaultProps = {
