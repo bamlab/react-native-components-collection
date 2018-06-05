@@ -9,23 +9,29 @@ class WithStateHandling extends Component {
 
   render() {
     return (
-      <VerificationCodeInput value={this.state.code} length={5} onChangeText={this.onChangeText} />
+      <VerificationCodeInput
+        value={this.state.code}
+        length={5}
+        onChangeText={this.onChangeText}
+        {...this.props}
+      />
     );
   }
 }
 
-storiesOf('VerificationCodeInput', module).add('default', () => <WithStateHandling />);
-
-storiesOf('VerificationCodeInput', module).add('with custom input style', () => (
-  <VerificationCodeInput
-    value="123"
-    length={6}
-    inputStyle={{
-      borderColor: 'purple',
-      width: 50,
-      height: 50,
-      borderRadius: 25,
-    }}
-    textStyle={{ color: 'purple', fontSize: 14 }}
-  />
-));
+storiesOf('VerificationCodeInput', module)
+  .add('default (numeric keyboard)', () => <WithStateHandling />)
+  .add('without numeric keyboard', () => <WithStateHandling keyboardType={null} />)
+  .add('with custom input style', () => (
+    <VerificationCodeInput
+      value="123"
+      length={6}
+      inputStyle={{
+        borderColor: 'purple',
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+      }}
+      textStyle={{ color: 'purple', fontSize: 14 }}
+    />
+  ));
