@@ -38,7 +38,6 @@ class VerificationCodeInput extends PureComponent<Props> {
       prevProps.value.length < this.props.length &&
       this.props.value.length === this.props.length
     ) {
-      Keyboard.dismiss();
       this.props.onEndEditing && this.props.onEndEditing();
     }
   }
