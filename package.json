@@ -19,9 +19,7 @@
 		"react-dom": "^16.2.0",
 		"react-native-paper": "^1.2.4",
 		"react-native-vector-icons": "^4.5.0",
-		"react-native-web": "^0.5.3"
-	},
-	"dependencies": {
+		"react-native-web": "^0.5.3",
 		"react-native-web-linear-gradient": "^1.0.2"
 	},
 	"scripts": {
