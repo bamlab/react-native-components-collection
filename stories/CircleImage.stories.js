@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@storybook/react';
+import LinearGradient from 'react-native-linear-gradient';
 import CircleImage from '../packages/react-native-component-circle-image';
 
 const exampleImage = {
@@ -17,5 +18,19 @@ storiesOf('CircleImage', module)
       contentContainerStyle={{
         backgroundColor: 'red',
       }}
+    />
+  ))
+  .add('with custom content container component', () => (
+    <CircleImage
+      source={exampleImage}
+      size={200}
+      ContentContainerComponent={props => (
+        <LinearGradient
+          colors={['red', 'blue']}
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+          {...props}
+        />
+      )}
     />
   ));
