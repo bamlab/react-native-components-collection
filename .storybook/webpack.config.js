@@ -22,7 +22,9 @@ module.exports = {
   resolve: {
     alias: {
       'react-native': 'react-native-web',
+      'react-native-linear-gradient': 'react-native-web-linear-gradient',
       '@bam.tech/react-native-component-progress-bar': '../react-native-component-progress-bar',
+      '@bam.tech/react-native-component-circle-image': '../react-native-component-circle-image',
     },
     extensions: ['.web.js', '.js'],
   },
