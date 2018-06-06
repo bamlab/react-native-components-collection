@@ -23,6 +23,7 @@ module.exports = {
     alias: {
       'react-native': 'react-native-web',
       '@bam.tech/react-native-component-progress-bar': '../react-native-component-progress-bar',
+      '@bam.tech/react-native-component-circle-image': '../react-native-component-circle-image',
     },
     extensions: ['.web.js', '.js'],
   },
