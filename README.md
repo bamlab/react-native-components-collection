@@ -2,11 +2,13 @@
 
 [Demo](https://bamlab.github.io/react-native-components-collection/)
 
+* [CircleImage](./packages/react-native-component-circle-image)
 * [Text](./packages/react-native-component-text)
 * [TextInput](./packages/react-native-component-text-input)
 * [PasswordStrengthIndicator](./packages/react-native-component-password-strength-indicator)
 * [ProgressBar](./packages/react-native-component-progress-bar)
 * [Separator](./packages/react-native-component-separator)
+* [VerificationCodeInput](./packages/react-native-component-verification-code-input)
 
 # Contributing
 ## Installation
