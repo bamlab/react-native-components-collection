@@ -1,0 +1,20 @@
+{
+  "name": "@bam.tech/react-native-component-map",
+  "version": "1.1.0",
+  "main": "index.js",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bamlab/react-native-components-collection.git"
+  },
+  "author": {
+    "name": "Alban Depretz",
+    "email": "alban.depretz@gmail.com",
+    "url": "https://github.com/chdeps"
+  },
+  "license": "MIT"
+}
+
