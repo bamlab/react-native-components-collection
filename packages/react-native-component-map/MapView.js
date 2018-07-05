@@ -83,7 +83,14 @@ class MapView extends PureComponent {
 
   _renderCluster = cluster => {
     const clusterId = cluster.properties.cluster_id;
-    return <Cluster key={clusterId} id={clusterId} cluster={cluster} />;
+    return (
+      <Cluster
+        key={clusterId}
+        id={clusterId}
+        cluster={cluster}
+        onPress={this.props.onClusterPress}
+      />
+    );
   };
 
   _renderMarker = cluster => {
