@@ -19,9 +19,9 @@
 
 | Prop | Type | Default | Note |
 |---|---|---|---|
-| `clustering` | `boolean` |  | (Optional) False by default. When true enables clustering of Markers.
-| `renderCluster` |`(Cluster) => React.Node` | (Optional) Render your custom clusters.
-| `onPressCluster` | `(Cluster) => void` |  | (Optional) Handle onPress on default clusters.
+| `clustering` | `boolean` | False | (Optional) When true enables clustering of Markers.
+| `renderCluster` |`(Cluster) => React.Node` | Renders default clusters on Map | (Optional) Render your custom clusters.
+| `onPressCluster` | `(Cluster) => void` | onPress not handled | (Optional) Handle onPress on default clusters.
 
 
 ## Types
