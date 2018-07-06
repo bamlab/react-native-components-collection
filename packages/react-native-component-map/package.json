@@ -15,6 +15,13 @@
     "email": "alban.depretz@gmail.com",
     "url": "https://github.com/chdeps"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "supercluster": "^4.0.1"
+  },
+  "peerDependencies": {
+    "react-native-maps": "^0.21.0",
+    "lodash": "^4.17.5"
+  }
 }
 

@@ -6,8 +6,10 @@ const SIZE = 40;
 const OUTERSKIRT = 10;
 
 export default class Cluster extends PureComponent {
+  onPress = () => this.props.onPress(this.props.cluster);
+
   render() {
-    const { color, cluster, onPress } = this.props;
+    const { color, cluster } = this.props;
     const { point_count, cluster_id } = cluster.properties;
     const coordinates = cluster.geometry.coordinates;
 
@@ -18,7 +20,7 @@ export default class Cluster extends PureComponent {
         width={SIZE}
         height={SIZE}
         anchor={{ x: 0.5, y: 0.5 }}
-        onPress={onPress}>
+        onPress={this.onPress}>
         <View style={[styles.clusterOuter, color && { backgroundColor: `rgba(${color}, 0.25)` }]}>
           <View style={[styles.cluster, color && { backgroundColor: `rgb(${color})` }]}>
             <Text style={styles.clusterText}>{point_count}</Text>
