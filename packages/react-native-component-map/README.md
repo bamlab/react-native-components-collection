@@ -1,5 +1,9 @@
 # `<MapView />` Component API
 
+## Dependencies
+
+#### react-native-maps > 0.21
+
 ## Children
 
 ⚠ A chaque Marker Custom ajouter les props:

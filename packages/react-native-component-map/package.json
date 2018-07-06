@@ -17,11 +17,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "supercluster": "^4.0.1"
+    "supercluster": "^4.0.1",
+    "lodash": "^4.17.5"
   },
   "peerDependencies": {
-    "react-native-maps": "^0.21.0",
-    "lodash": "^4.17.5"
+    "react-native-maps": "^0.21.0"
   }
 }
 
