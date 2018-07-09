@@ -9,7 +9,7 @@
 * [ProgressBar](./packages/react-native-component-progress-bar)
 * [Separator](./packages/react-native-component-separator)
 * [VerificationCodeInput](./packages/react-native-component-verification-code-input)
-* [MapView with clustering](./packages/react-native-component-map)
+* [MapView with clustering](./packages/react-native-component-map-clustering)
 
 # Contributing
 ## Installation
