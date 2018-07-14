@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { storiesOf } from '@storybook/react';
-import VerificationCodeInput from '../packages/react-native-component-verification-code-input';
+import VerificationCodeInput from '@bam.tech/react-native-component-verification-code-input';
 
 class WithStateHandling extends Component {
   state = { code: '' };

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Button, Text } from 'react-native';
 import { TextInput as PaperTextInput } from 'react-native-paper';
 import { storiesOf } from '@storybook/react';
-import TextInput from '../packages/react-native-component-text-input';
+import TextInput from '@bam.tech/react-native-component-text-input';
 
 class TextInputWithFocusButton extends Component {
   setRef = c => {

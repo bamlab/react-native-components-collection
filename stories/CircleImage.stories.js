@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { storiesOf } from '@storybook/react';
 import LinearGradient from 'react-native-linear-gradient';
-import CircleImage from '../packages/react-native-component-circle-image';
+import CircleImage from '@bam.tech/react-native-component-circle-image';
 
 const exampleImage = {
   uri:

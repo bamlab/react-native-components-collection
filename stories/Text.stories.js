@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Text from '../packages/react-native-component-text';
+import Text from '@bam.tech/react-native-component-text';
 
 storiesOf('Text', module).add('default', () => <Text>Hello</Text>);
 

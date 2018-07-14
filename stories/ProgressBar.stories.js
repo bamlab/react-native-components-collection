@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import ProgressBar from '../packages/react-native-component-progress-bar';
+import ProgressBar from '@bam.tech/react-native-component-progress-bar';
 
 storiesOf('ProgressBar', module)
   .add('default', () => <ProgressBar />)

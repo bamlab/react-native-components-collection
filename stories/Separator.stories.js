@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { storiesOf } from '@storybook/react';
-import Separator from '../packages/react-native-component-separator';
+import Separator from '@bam.tech/react-native-component-separator';
 
 storiesOf('Separator', module)
   .add('default', () => <Separator />)

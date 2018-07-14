@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput } from 'react-native';
 import { storiesOf } from '@storybook/react';
-import PasswordStrengthIndicator from '../packages/react-native-component-password-strength-indicator';
+import PasswordStrengthIndicator from '@bam.tech/react-native-component-password-strength-indicator';
 
 class WithTextInput extends Component {
   state = { password: '' };
