@@ -11,7 +11,7 @@ import {
   Keyboard,
 } from 'react-native';
 
-type Props = {
+type PropsType = {
   value: string,
   length: number,
   style?: any,
@@ -24,7 +24,7 @@ type Props = {
   onEndEditing?: () => any,
 };
 
-class VerificationCodeInput extends PureComponent<Props> {
+class VerificationCodeInput extends PureComponent<PropsType> {
   static defaultProps = {
     keyboardType: 'numeric',
     HiddenTextInputComponent: TextInput,
