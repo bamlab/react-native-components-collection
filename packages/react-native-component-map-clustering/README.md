@@ -1,30 +1,37 @@
-# `<MapView />` Component API
+# Map with clustering
 
-## Dependencies
+## Installation
 
-#### react-native-maps > 0.21
+```bash
+yarn add @bam.tech/react-native-component-map-clustering
+```
 
-## Children
+**Dependencies:**
 
-⚠ A chaque Marker Custom ajouter les props:
+* [react-native-maps](https://github.com/react-community/react-native-maps) > 0.21
 
-- id
-- coordinate : { longitude, latitude }
+## Usage
 
-## Props
+### Children
 
-### Props from the [react-native-maps API](https://github.com/react-community/react-native-maps/blob/master/docs/mapview.md)
+⚠ For each custom marker, add the following props:
 
-### Other props
+* id
+* coordinate : { longitude, latitude }
 
-| Prop | Type | Default | Note |
-|---|---|---|---|
-| `clustering` | `boolean` | False | (Optional) When true enables clustering of Markers.
-| `renderCluster` |`(Cluster) => React.Node` | Renders default clusters on Map | (Optional) Render your custom clusters.
-| `onPressCluster` | `(Cluster) => void` | onPress not handled | (Optional) Handle onPress on default clusters.
+### Props
 
+#### Props from the [react-native-maps API](https://github.com/react-community/react-native-maps/blob/master/docs/mapview.md)
 
-## Types
+#### Other props
+
+| Prop             | Type                      | Default                         | Note                                                |
+| ---------------- | ------------------------- | ------------------------------- | --------------------------------------------------- |
+| `clustering`     | `boolean`                 | False                           | (Optional) When true enables clustering of Markers. |
+| `renderCluster`  | `(Cluster) => React.Node` | Renders default clusters on Map | (Optional) Render your custom clusters.             |
+| `onPressCluster` | `(Cluster) => void`       | onPress not handled             | (Optional) Handle onPress on default clusters.      |
+
+### Types
 
 ```
 type Cluster {
