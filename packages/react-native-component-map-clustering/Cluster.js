@@ -6,7 +6,7 @@ const SIZE = 40;
 const OUTERSKIRT = 10;
 
 export default class Cluster extends PureComponent {
-  onPress = () => this.props.onPress(this.props.cluster);
+  onPress = () => this.props.onPress && this.props.onPress(this.props.cluster);
 
   render() {
     const { color, cluster } = this.props;
