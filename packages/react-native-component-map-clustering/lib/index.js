@@ -1,3 +1,5 @@
+import superCluster from 'supercluster';
+
 export const BoundaryBox = region => [
   region.longitude - region.longitudeDelta / 2,
   region.latitude - region.latitudeDelta / 2,
@@ -15,12 +17,38 @@ const _zoom = fraction => {
   return Math.floor(Math.log(1 / fraction) / Math.LN2);
 };
 
-export const ZOOM_MAX = 15;
+const ZOOM_MAX = 15;
+const NODE_SIZE = 128;
+const RADIUS = 60;
 
-//TODO: Calculate maximum region zoom deltas
-export const ZOOM_MAX_REGION = {
-  latitudeDelta: 0.01,
-  longitudeDelta: 0.0048,
+export const createSuperCluster = () =>
+  superCluster({
+    radius: RADIUS,
+    maxZoom: ZOOM_MAX,
+    nodeSize: NODE_SIZE,
+  });
+
+export const maxZoomDelta = ({ top, left, bottom, right }) => {
+  let { latitudeDelta, longitudeDelta } = MAX_ZOOM_DELTA;
+  let latitudeOffset = 0,
+    longitudeOffset = 0;
+  if (isWithin(top, [0, 1])) latitudeOffset -= latitudeDelta / 2 - top * latitudeDelta;
+  else if (isWithin(bottom, [0, 1])) latitudeOffset += latitudeDelta / 2 - bottom * latitudeDelta;
+  if (isWithin(left, [0, 1])) longitudeOffset -= longitudeDelta / 2 - left * longitudeDelta;
+  else if (isWithin(right, [0, 1])) longitudeOffset += longitudeDelta / 2 - right * longitudeDelta;
+  return {
+    longitudeOffset,
+    latitudeOffset,
+    longitudeDelta,
+    latitudeDelta,
+  };
+};
+
+const isWithin = (number, range) => number && number <= range[1] && number >= range[0];
+
+export const MAX_ZOOM_DELTA = {
+  latitudeDelta: 0.007,
+  longitudeDelta: 0.006,
 };
 
 export const zoomLevel = region => {
