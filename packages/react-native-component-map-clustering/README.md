@@ -19,6 +19,17 @@ yarn add @bam.tech/react-native-component-map-clustering
 * id
 * coordinate : { longitude, latitude }
 
+### Ref
+
+##### Ref methods from react-native-maps such as animateToRegion()
+
+##### Extra methods
+
+| Method           | Type                                                               |  Note                                     |
+| ---------------- | ------------------------------------------------------------------ | ----------------------------------------- |
+| `zoomOnMarker`   | `({latitude, longitude}, { top, bottom, right, left }) => void`    | Zoom on a marker & place it on the screen |
+
+
 ### Props
 
 #### Props from the [react-native-maps API](https://github.com/react-community/react-native-maps/blob/master/docs/mapview.md)
@@ -30,6 +41,7 @@ yarn add @bam.tech/react-native-component-map-clustering
 | `clustering`     | `boolean`                 | False                           | (Optional) When true enables clustering of Markers. |
 | `renderCluster`  | `(Cluster) => React.Node` | Renders default clusters on Map | (Optional) Render your custom clusters.             |
 | `onPressCluster` | `(Cluster) => void`       | onPress not handled             | (Optional) Handle onPress on default clusters.      |
+| `setRef`         | `(React ref) => void      |                                 | (Optional) Get the MapView ref                      |
 
 ### Types
 
