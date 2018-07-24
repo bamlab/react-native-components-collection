@@ -64,6 +64,8 @@ class VerificationCodeInput extends PureComponent<PropsType> {
       keyboardType,
       length,
       value,
+      onChangeText,
+      ...otherProps,
     } = this.props;
     return (
       <View style={style}>
@@ -78,7 +80,8 @@ class VerificationCodeInput extends PureComponent<PropsType> {
               this.hiddenInput = ref;
             }}
             value={value}
-            onChangeText={this.props.onChangeText}
+            onChangeText={onChangeText}
+            {...otherProps}
           />
         </View>
       </View>
