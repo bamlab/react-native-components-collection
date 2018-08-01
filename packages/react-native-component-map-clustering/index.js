@@ -1,2 +1,2 @@
 export { default } from './MapView';
-export { ZOOM_MAX_REGION } from './lib';
+export { MAX_ZOOM_DELTA as ZOOM_MAX_REGION } from './lib';

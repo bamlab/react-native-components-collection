@@ -1,14 +1,9 @@
-// @flow
 import React, { PureComponent } from 'react';
 import { StyleSheet } from 'react-native';
 import RNMapView from 'react-native-maps';
-import superCluster from 'supercluster';
 import { throttle } from 'lodash';
-import { zoomLevel, BoundaryBox, ZOOM_MAX } from './lib';
+import { zoomLevel, BoundaryBox, createSuperCluster, maxZoomDelta } from './lib';
 import Cluster from './Cluster';
-
-const NODE_SIZE = 128;
-const RADIUS = 60;
 
 class MapView extends PureComponent {
   map;
@@ -28,16 +23,29 @@ class MapView extends PureComponent {
 
   _setRef = ref => {
     this.map = ref;
-    this.props.setRef(ref);
+    this.map.zoomOnMarker = this.zoomOnMarker;
+    this.props.setRef(this.map);
+  };
+
+  zoomOnMarker = ({ latitude, longitude }, { top, left, bottom, right }) => {
+    const { longitudeDelta, latitudeDelta, latitudeOffset, longitudeOffset } = maxZoomDelta({
+      top,
+      left,
+      bottom,
+      right,
+    });
+    this.map &&
+      this.map.animateToRegion({
+        latitude: latitude + latitudeOffset,
+        longitude: longitude + longitudeOffset,
+        longitudeDelta,
+        latitudeDelta,
+      });
   };
 
   _createClusters = () => {
     if (!this.superCluster) {
-      this.superCluster = superCluster({
-        radius: RADIUS,
-        maxZoom: ZOOM_MAX,
-        nodeSize: NODE_SIZE,
-      });
+      this.superCluster = createSuperCluster();
     }
     const GeoJSONs = [];
     const others = [];
