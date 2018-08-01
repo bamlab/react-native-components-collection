@@ -27,7 +27,7 @@ yarn add @bam.tech/react-native-component-map-clustering
 
 | Method           | Type                                                               |  Note                                     |
 | ---------------- | ------------------------------------------------------------------ | ----------------------------------------- |
-| `zoomOnMarker`   | `({latitude, longitude}, { top, bottom, right, left }) => void`    | Zoom on a marker & place it on the screen |
+| `zoomOnMarker`   | `({latitude, longitude}, { top, bottom, right, left }) => void`    | Zoom on a marker & place it on the screen. `left`, `right`, `top`, `bottom` are in between 0 & 1. They represent out far to the right, left, top, or bottom to place the marker.  |
 
 
 ### Props
