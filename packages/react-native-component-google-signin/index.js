@@ -23,7 +23,9 @@ export default class GoogleAuthButton extends PureComponent {
     }
     this.setState({ isLoading: true });
     GoogleSignin.configure(googleSignInConfig)
-      .then(GoogleSignin.signIn)
+      .then(() => {
+        return GoogleSignin.signIn();
+      })
       .then(onAuthSuccess)
       .catch(onAuthFailure)
       .finally(() => {
