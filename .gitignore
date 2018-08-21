@@ -1,6 +1,7 @@
 # OSX
 #
 .DS_Store
+.idea
 
 # node.js
 #
@@ -10,4 +11,3 @@ yarn-error.log
 lerna-debug.log
 
 storybook-static
-.idea/

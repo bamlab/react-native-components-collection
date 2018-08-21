@@ -1,0 +1,21 @@
+{
+  "name": "@bam.tech/react-native-component-google-signin",
+  "version": "0.0.0",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bamlab/react-native-components-collection.git"
+  },
+  "author": {
+    "name": "Alban Depretz",
+    "email": "alban.depretz@gmail.com",
+    "url": "https://github.com/chdeps"
+  },
+  "peerDependencies": {
+    "react-native-google-signin": "^0.12.0"
+  },
+  "license": "MIT"
+}

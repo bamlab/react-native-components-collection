@@ -5,22 +5,26 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Text from '@bam.tech/react-native-component-text';
+import GoogleSignIn from '@bam.tech/react-native-component-google-signin';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
-});
+const IOS_CLIENT_ID = '603475410669-u1l97qhp1b5inu4v3md82no7cpb12mpb.apps.googleusercontent.com';
 
-type PropsType = {};
-export default class App extends Component<PropsType> {
+export default class App extends Component<> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Text style={styles.welcome}>Welcome to our components collection!</Text>
+        <GoogleSignIn
+          googleSignInConfig={{
+            iosClientId: IOS_CLIENT_ID,
+          }}
+          onAuthSuccess={({ givenName }) => {
+            console.warn(`Welcome ${givenName}!`);
+          }}
+          onAuthFailure={error => console.warn('Oups an error occured..', error)}
+        />
       </View>
     );
   }
