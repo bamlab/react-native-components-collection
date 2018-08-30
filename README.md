@@ -3,6 +3,7 @@
 [Demo](https://bamlab.github.io/react-native-components-collection/)
 
 * [CircleImage](./packages/react-native-component-circle-image)
+* [Google Sign-In Button](./packages/react-native-component-google-signin)
 * [Map with clustering](./packages/react-native-component-map-clustering)
 * [PasswordStrengthIndicator](./packages/react-native-component-password-strength-indicator)
 * [ProgressBar](./packages/react-native-component-progress-bar)
