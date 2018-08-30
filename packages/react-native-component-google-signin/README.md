@@ -19,4 +19,12 @@ yarn add @bam.tech/react-native-component-google-signin
 
 ### Style
 
-    There is also a number of styling props such as buttonStyle, textStyle, text, activityIndicatorColor, LogoSource, logoStyle, ActivityIndicatorComponent, TouchableComponent, TextComponent.
+#### `buttonStyle`
+#### `textStyle`
+#### `text`
+#### `activityIndicatorColor`
+#### `LogoSource`
+#### `logoStyle`
+#### `ActivityIndicatorComponent`
+#### `TouchableComponent`
+#### `TextComponent`
