@@ -1,6 +1,6 @@
 {
   "name": "@bam.tech/react-native-component-verification-code-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "private": false,
   "publishConfig": {
