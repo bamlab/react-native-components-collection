@@ -1,6 +1,6 @@
 {
   "name": "@bam.tech/react-native-component-code-push-update-button",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "private": false,
   "publishConfig": {
