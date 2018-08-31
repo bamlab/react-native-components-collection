@@ -2,6 +2,7 @@
 
 [Demo](https://bamlab.github.io/react-native-components-collection/)
 
+* [CodePushUpdateButton](./packages/react-native-component-code-push-update-button)
 * [CircleImage](./packages/react-native-component-circle-image)
 * [Google Sign-In Button](./packages/react-native-component-google-signin)
 * [Map with clustering](./packages/react-native-component-map-clustering)
