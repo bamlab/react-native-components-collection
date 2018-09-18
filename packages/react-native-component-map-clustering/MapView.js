@@ -8,6 +8,7 @@ import Cluster from './Cluster';
 class MapView extends PureComponent {
   map;
   superCluster;
+  hasSuperClusterLoaded = false;
 
   state = {
     clusters: [],
@@ -24,7 +25,7 @@ class MapView extends PureComponent {
   _setRef = ref => {
     this.map = ref;
     this.map.zoomOnMarker = this.zoomOnMarker;
-    this.props.setRef(this.map);
+    this.props.setRef && this.props.setRef(this.map);
   };
 
   zoomOnMarker = ({ latitude, longitude }, { top, left, bottom, right }) => {
@@ -44,6 +45,7 @@ class MapView extends PureComponent {
   };
 
   _createClusters = () => {
+    this.hasSuperClusterLoaded = false;
     if (!this.superCluster) {
       this.superCluster = createSuperCluster();
     }
@@ -71,6 +73,7 @@ class MapView extends PureComponent {
       },
       () => {
         this.superCluster.load(GeoJSONs);
+        this.hasSuperClusterLoaded = true;
         this._calculateClusters();
       }
     );
@@ -79,7 +82,7 @@ class MapView extends PureComponent {
   _createClustersThrottle = throttle(this._createClusters, 500);
 
   _calculateClusters = () => {
-    if (this.superCluster && this.state.region) {
+    if (this.hasSuperClusterLoaded && this.superCluster && this.state.region) {
       const bbox = BoundaryBox(this.state.region);
       const zoom = zoomLevel(bbox);
       const clusters = this.superCluster.getClusters(bbox, zoom);
@@ -111,7 +114,7 @@ class MapView extends PureComponent {
 
   _onRegionChangeComplete = region => {
     if (this.props.clustering) this._calculateClustersOnRegion(region);
-    this.props.onRegionChangeComplete(region);
+    this.props.onRegionChangeComplete && this.props.onRegionChangeComplete(region);
   };
 
   _calculateClustersOnRegion = throttle(
