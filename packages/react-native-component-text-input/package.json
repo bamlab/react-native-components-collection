@@ -2,6 +2,7 @@
   "name": "@bam.tech/react-native-component-text-input",
   "version": "1.0.3",
   "main": "index.js",
+  "types": "index.d.ts",
   "private": false,
   "publishConfig": {
     "access": "public"
