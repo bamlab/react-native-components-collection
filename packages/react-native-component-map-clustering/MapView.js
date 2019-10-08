@@ -52,19 +52,21 @@ class MapView extends PureComponent {
     const GeoJSONs = [];
     const others = [];
     React.Children.forEach(this.props.children, child => {
-      if (child.props && child.props.coordinate) {
-        GeoJSONs.push({
-          properties: {
-            id: child.props.id,
-          },
-          Marker: child,
-          geometry: {
-            type: 'Point',
-            coordinates: [child.props.coordinate.longitude, child.props.coordinate.latitude],
-          },
-        });
-      } else {
-        others.push(child);
+      if (child) {
+        if (child.props && child.props.coordinate) {
+          GeoJSONs.push({
+            properties: {
+              id: child.props.id,
+            },
+            Marker: child,
+            geometry: {
+              type: 'Point',
+              coordinates: [child.props.coordinate.longitude, child.props.coordinate.latitude],
+            },
+          });
+        } else {
+          others.push(child);
+        }
       }
     });
     this.setState(
