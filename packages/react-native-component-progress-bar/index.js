@@ -34,6 +34,7 @@ export default class ProgressBar extends PureComponent {
       easing: this.props.easing,
       duration: this.props.easingDuration,
       toValue: this.props.progress,
+      useNativeDriver: false,
     }).start();
   };
 
