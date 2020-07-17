@@ -6,6 +6,10 @@ kdbush@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/kdbush/-/kdbush-2.0.1.tgz#90c6128e3001ac68c550d7c9e2f222c0269666f1"
 
+lodash@^4.17.5:
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+
 supercluster@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/supercluster/-/supercluster-4.0.1.tgz#eead7ab49f50322b265e0087859ebcabdc5c2ed8"
